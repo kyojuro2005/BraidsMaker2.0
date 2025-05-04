@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salon de Coiffure - BraidsMaker2.0</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#9333ea',secondary:'#4c1d95'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+background-color: #0f172a;
+color: #e2e8f0;
+}
+.heading {
+font-family: 'Playfair Display', serif;
+}
+.logo-text {
+font-family: 'Playfair Display', serif;
+font-weight: 600;
+}
+.hero-section {
+background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 0.3) 100%), url('./photos/Design\ sans\ titre\ \(1\).png');
+background-size: cover;
+background-position: center;
+}
+.service-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.gallery-img {
+transition: transform 0.3s ease;
+}
+.gallery-img:hover {
+transform: scale(1.03);
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav class="bg-slate-900 shadow-lg border-b border-slate-800 py-4">
+<div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<img src="https://readdy.ai/api/search-image?query=minimalist%2520scissors%2520logo%2520in%2520gray%2520color%2C%2520simple%2520elegant%2520design%2C%2520clean%2520lines%2C%2520professional%2520hairdresser%2520symbol%2C%2520modern%2520salon%2520branding%2C%2520stylish%2520hair%2520cutting%2520icon%2C%2520sophisticated%2520beauty%2520industry%2520mark&width=100&height=100&seq=2&orientation=squarish" alt="Logo" class="h-12 w-auto">
+<span class="logo-text text-white text-xl">BraidsMaker2.0</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#accueil" class="text-gray-300 hover:text-primary transition-colors">Accueil</a>
+<a href="#services" class="text-gray-300 hover:text-primary transition-colors">Services</a>
+<a href="#galerie" class="text-gray-300 hover:text-primary transition-colors">Galerie</a>
+<a href="#apropos" class="text-gray-300 hover:text-primary transition-colors">À Propos</a>
+<a href="#contact" class="text-gray-300 hover:text-primary transition-colors">Contact</a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-gray-700 focus:outline-none">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</button>
+</div>
+<a href="https://forms.gle/AvjxxceQw5S7nyCbA" class="hidden md:flex items-center bg-primary text-white px-5 py-2 !rounded-button hover:bg-opacity-90 transition-colors">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-form-fill"></i>
+</div>
+Réserver
+</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section id="accueil" class="hero-section py-20 md:py-32">
+<div class="container mx-auto px-4 md:px-6 w-full">
+<div class="max-w-xl">
+<h1 class="heading text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Bienvenue chez BraidsMaker2.0</h1>
+<p class="text-lg text-gray-700 mb-8">Authenticité Originalité Créativité</p>
+<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+<a href="#services" class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition-colors text-center whitespace-nowrap">Nos Services</a>
+<a href="https://forms.gle/AvjxxceQw5S7nyCbA" class="border border-primary text-primary px-8 py-3 !rounded-button hover:bg-primary hover:bg-opacity-10 transition-colors flex items-center justify-center whitespace-nowrap">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-form-fill"></i>
+</div>
+Réserver Maintenant
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-16 bg-slate-800/50">
+<div class="container mx-auto px-4 md:px-6">
+<div class="text-center mb-16">
+<h2 class="heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nos Services</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Découvrez notre gamme complète de services de coiffure, conçus pour mettre en valeur votre beauté naturelle et exprimer votre style unique.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="service-card bg-slate-900 rounded shadow-xl border border-slate-800 overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="./photos/Design sans titre (8).png" alt="Tresses Protectrices" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="heading text-xl font-semibold text-gray-900 mb-3">Tresses Protectrices</h3>
+<p class="text-gray-600 mb-4">Protégez vos cheveux avec nos tresses protectrices, conçues pour maintenir la santé et la beauté de vos cheveux avec du matériel de qualité.</p>
+<a href="https://wa.me/22870512480?text=Je%20souhaite%20réserver%20pour%20des%20Tresses%20Protectrices" class="inline-flex items-center text-primary hover:underline">
+Réserver ce service
+<div class="w-5 h-5 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="service-card bg-slate-900 rounded shadow-xl border border-slate-800 overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="./photos/Design sans titre (9).png" alt="Tresses Africaines & Locks" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="heading text-xl font-semibold text-gray-900 mb-3">Tresses Africaines & Locks et Twist</h3>
+<p class="text-gray-600 mb-4">Tresses en boîte, tresses africaines, tresses fulani, tresses sans nœuds. Des styles authentiques et élégants pour tous les goûts.</p>
+<a href="https://wa.me/22870512480?text=Je%20souhaite%20réserver%20pour%20des%20Tresses%20Africaines" class="inline-flex items-center text-primary hover:underline">
+Réserver ce service
+<div class="w-5 h-5 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="service-card bg-slate-900 rounded shadow-xl border border-slate-800 overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="./photos/Design sans titre (10).png" alt="Coiffures avec extensions" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="heading text-xl font-semibold text-gray-900 mb-3">Coiffures avec extensions</h3>
+<p class="text-gray-600 mb-4">Tissages, rajouts, tresses au crochet, queue de cheval… tresses personnalisées à la demande pour un look unique et sur mesure.</p>
+<a href="https://wa.me/22870512480?text=Je%20souhaite%20réserver%20pour%20des%20Coiffures%20avec%20extensions" class="inline-flex items-center text-primary hover:underline">
+Réserver ce service
+<div class="w-5 h-5 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section id="galerie" class="py-16">
+<div class="container mx-auto px-4 md:px-6">
+<div class="text-center mb-16">
+<h2 class="heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">Notre Galerie</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Découvrez nos plus belles réalisations et laissez-vous inspirer par notre savoir-faire et notre créativité.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<div class="gallery-img overflow-hidden rounded">
+<img src="./photos/photo_2025-01-05_17-49-37.jpg" alt="Coiffure 1" class="w-full h-80 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+<div class="gallery-img overflow-hidden rounded">
+<img src="./photos/photo_2025-01-05_17-49-40.jpg" alt="Coiffure 2" class="w-full h-80 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+<div class="gallery-img overflow-hidden rounded">
+<img src="./photos/photo_2025-01-05_18-04-25.jpg" alt="Coiffure 3" class="w-full h-80 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+<div class="gallery-img overflow-hidden rounded">
+<img src="./photos/photo_2025-01-05_18-04-37.jpg" alt="Coiffure 4" class="w-full h-80 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+<div class="gallery-img overflow-hidden rounded">
+<img src="./photos/photo_2025-01-05_18-19-42 (2).jpg" alt="Coiffure 5" class="w-full h-80 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+<div class="gallery-img overflow-hidden rounded">
+<img src="./photos/photo_2025-01-05_18-19-44.jpg" alt="Coiffure 6" class="w-full h-80 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+<div class="gallery-img overflow-hidden rounded">
+<img src="./photos/photo_2025-01-05_18-19-48.jpg" alt="Coiffure 7" class="w-full h-80 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+<div class="gallery-img overflow-hidden rounded">
+<img src="./photos/photo_2025-01-05_18-19-42.jpg" alt="Coiffure 8" class="w-full h-80 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="apropos" class="py-16 bg-slate-800/50">
+<div class="container mx-auto px-4 md:px-6">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<img src="./photos/Auteur..jpg" alt="Notre Styliste" class="w-full h-auto rounded-lg shadow-lg">
+</div>
+<div class="md:w-1/2">
+<h2 class="heading text-3xl md:text-4xl font-bold text-gray-900 mb-6">Notre Expertise</h2>
+<p class="text-gray-600 mb-6">Hi je suis braidsmaker2.0 , passionnée par la coiffure  . Déjà quelques années que je me suis lancée dans cette partie de l’ art en tant qu’ autodidacte</p>
+<p class="text-gray-600 mb-6">Aujourd’hui, je suis spécialisée dans les tresses. Je travaille uniquement sur rendez vous et propose une gamme de coiffures assez variées pour  femmes .</p>
+<p class="text-gray-600 mb-8"> Knotless braids, bohemian braids ,butterfly braids , Fulani braids , faux locs , tissages, crochet afro…voici brièvement cité quelques types de coiffures de ladite gamme. N’ hésitez pas à me contacter .</p>
+<a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition-colors inline-block whitespace-nowrap">Contactez-nous</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4 md:px-6">
+<div class="max-w-4xl mx-auto bg-slate-900 rounded-lg p-8 md:p-12 shadow-xl border border-slate-800">
+<div class="text-center mb-8">
+<h2 class="heading text-3xl font-bold text-gray-900 mb-4">Réservez Votre Rendez-vous</h2>
+<p class="text-gray-600">Prenez rendez-vous facilement via WhatsApp pour une expérience personnalisée et sans attente.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center justify-center">
+<div class="text-center md:text-left">
+<h3 class="heading text-xl font-semibold text-gray-900 mb-4">Comment ça marche ?</h3>
+<ul class="space-y-4">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary rounded-full text-white mr-3 mt-0.5 flex-shrink-0">1</div>
+<p class="text-gray-600">Cliquez sur le bouton WhatsApp ci-contre</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary rounded-full text-white mr-3 mt-0.5 flex-shrink-0">2</div>
+<p class="text-gray-600">Indiquez le service souhaité et vos disponibilités</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary rounded-full text-white mr-3 mt-0.5 flex-shrink-0">3</div>
+<p class="text-gray-600">Nous vous confirmerons rapidement votre rendez-vous</p>
+</li>
+</ul>
+</div>
+<div class="text-center">
+<a href="https://wa.me/22870512480" class="inline-flex items-center justify-center bg-[#25D366] text-white px-8 py-4 !rounded-button hover:bg-opacity-90 transition-colors shadow-md whitespace-nowrap">
+<div class="w-6 h-6 flex items-center justify-center mr-3">
+<i class="ri-whatsapp-fill ri-lg"></i>
+</div>
+Réserver via WhatsApp
+</a>
+<p class="text-gray-500 mt-4">Réponse rapide garantie</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-slate-800/50">
+<div class="container mx-auto px-4 md:px-6">
+<div class="text-center mb-12">
+<h2 class="heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contactez-nous</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Nous sommes à votre disposition pour répondre à toutes vos questions et vous accueillir dans notre salon.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+<!-- Address -->
+<div class="bg-slate-900 p-6 rounded-lg shadow-xl border border-slate-800 text-center">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-map-pin-line ri-xl text-primary"></i>
+</div>
+<h3 class="heading text-lg font-semibold text-gray-900 mb-2">Adresse</h3>
+<p class="text-gray-600">Lomé, Togo</p>
+</div>
+<!-- Phone -->
+<div class="bg-slate-900 p-6 rounded-lg shadow-xl border border-slate-800 text-center">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-phone-line ri-xl text-primary"></i>
+</div>
+<h3 class="heading text-lg font-semibold text-gray-900 mb-2">Téléphone</h3>
+<p class="text-gray-600">+228 70 51 24 80</p>
+</div>
+<!-- Email -->
+<div class="bg-slate-900 p-6 rounded-lg shadow-xl border border-slate-800 text-center">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-mail-line ri-xl text-primary"></i>
+</div>
+<h3 class="heading text-lg font-semibold text-gray-900 mb-2">Email</h3>
+<p class="text-gray-600">manuellaayivor@gmail.com</p>
+</div>
+</div>
+<div class="mt-12 max-w-5xl mx-auto bg-slate-900 p-8 rounded-lg shadow-xl border border-slate-800">
+<h3 class="heading text-2xl font-semibold text-gray-900 mb-6 text-center">Envoyez-nous un message</h3>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+<input type="text" id="name" class="w-full px-4 py-2 bg-slate-800 border-none rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder-gray-500 text-gray-300" placeholder="Votre nom">
+</div>
+<div>
+<label for="number" class="block text-sm font-medium text-gray-700 mb-1">Numéro de téléphone</label>
+<input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Votre email">
+</div>
+</div>
+<div>
+<label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
+<input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Sujet de votre message">
+</div>
+<div>
+<label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+<textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Votre message"></textarea>
+</div>
+<div class="text-center">
+    <a href="https://forms.gle/AvjxxceQw5S7nyCbA" class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition-colors text-center whitespace-nowrap">Remplir le formulaire</a>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-900 border-t border-slate-800 text-white py-12">
+<div class="container mx-auto px-4 md:px-6">
+<div class="flex flex-col md:flex-row justify-between items-center mb-8">
+<div class="flex items-center space-x-2 mb-6 md:mb-0">
+<img src="https://readdy.ai/api/search-image?query=minimalist%2520scissors%2520logo%2520in%2520white%2520color%2C%2520simple%2520elegant%2520design%2C%2520clean%2520lines%2C%2520professional%2520hairdresser%2520symbol%2C%2520modern%2520salon%2520branding%2C%2520stylish%2520hair%2520cutting%2520icon%2C%2520sophisticated%2520beauty%2520industry%2520mark&width=100&height=100&seq=15&orientation=squarish" alt="Logo" class="h-10 w-auto">
+<span class="logo-text text-xl">BraidsMaker2.0</span>
+</div>
+<div class="flex space-x-4">
+<a href="https://www.tiktok.com/@braidsmaker2.0?_t=ZN-8vrop4ewZuA&_r=1" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+<i class="ri-tiktok-line"></i>
+</a>
+<a href="https://www.instagram.com/braidsmaker_2.0?igsh=MTZ4bXF0MGFmZjdodA==" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://wa.me/22870512480" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+<i class="ri-whatsapp-line"></i>
+</a>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h4 class="text-lg font-semibold mb-4">À Propos</h4>
+<p class="text-gray-400">BraidsMaker2.0 est votre salon de coiffure spécialisé dans les coiffures africaines à Lomé. Nous vous offrons des services de qualité pour sublimer votre beauté naturelle.</p>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Liens Rapides</h4>
+<ul class="space-y-2">
+<li><a href="#accueil" class="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+<li><a href="#galerie" class="text-gray-400 hover:text-white transition-colors">Galerie</a></li>
+<li><a href="#apropos" class="text-gray-400 hover:text-white transition-colors">À Propos</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Tresses Protectrices</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Tresses Africaines</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Locks et Twist</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Coiffures avec extensions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Contact</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-map-pin-line text-gray-400"></i>
+</div>
+<span class="text-gray-400">Lomé, Togo</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-phone-line text-gray-400"></i>
+</div>
+<span class="text-gray-400">+228 70 51 24 80</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-mail-line text-gray-400"></i>
+</div>
+<span class="text-gray-400">manuellaayivor@gmail.com</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 text-center">
+<p class="text-gray-400">&copy; 2025 BraidsMaker2.0 Tous droits réservés.</p>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile menu toggle
+const menuButton = document.querySelector('.ri-menu-line').parentElement.parentElement;
+const mobileMenu = document.createElement('div');
+mobileMenu.className = 'fixed inset-0 bg-gray-900 bg-opacity-95 z-50 flex flex-col items-center justify-center transform transition-transform duration-300 translate-x-full md:hidden';
+mobileMenu.innerHTML = `
+<button class="absolute top-4 right-4 text-white focus:outline-none">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-close-line ri-lg"></i>
+</div>
+</button>
+<div class="flex flex-col items-center space-y-6 text-xl">
+<a href="#accueil" class="text-white hover:text-primary transition-colors">Accueil</a>
+<a href="#services" class="text-white hover:text-primary transition-colors">Services</a>
+<a href="#galerie" class="text-white hover:text-primary transition-colors">Galerie</a>
+<a href="#apropos" class="text-white hover:text-primary transition-colors">À Propos</a>
+<a href="#contact" class="text-white hover:text-primary transition-colors">Contact</a>
+<a href="https://wa.me/22870512480" class="flex items-center bg-primary text-white px-5 py-2 !rounded-button hover:bg-opacity-90 transition-colors mt-4">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-whatsapp-line"></i>
+</div>
+Réserver
+</a>
+</div>
+`;
+document.body.appendChild(mobileMenu);
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('translate-x-full');
+});
+mobileMenu.querySelector('button').addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>
